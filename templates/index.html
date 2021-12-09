@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users CRUD Modularized</title>
+</head>
+<body>
+    <h1>Company Department Index</h1>
+    {% for department in departments %}
+    <h3>Department: {{department.name}}</h3>
+    <p>Location: {{department.location}}</p>
+    {% endfor %}
+    <p>Create a New Department:</p>
+    <form action="/departments/create" method=POST>
+        <label for="name" name="name">Name</label>
+        <input type="text" name="name">
+        <label for="location" name="location">Location</label>
+        <input type="text" name="location">
+        <input type="submit" value="Click me!">
+    </form>
+</body>
+</html>
